@@ -1,0 +1,487 @@
+{
+  "aliases": [
+    "bomdia_pt.009648",
+    "bomdia_pt"
+  ],
+  "retailChainName": "CBD",
+  "software": {
+    "setting": {
+      "autoDeploy": "ACTIVE",
+      "owner": "Sonae SONAE",
+      "country": "Portugal",
+      "fileName": "SONAE_MC_FOOD_-_20250701_CONTINENTE_MCH-MH-BJ_S1_25.1.2.smf",
+      "preferredDateFormatPattern": "dd-MM-yyyy",
+      "store": "MCH-MH-BJ",
+      "version": "25.1.2",
+      "url": "https://insight-downloads-eu.vusion.io/settings/bomdia_pt/SONAE_MC_FOOD_-_20250701_CONTINENTE_MCH-MH-BJ_S1_25.1.2.smf",
+      "labelTypes": [
+        {
+          "naturalOrder": "2.5",
+          "pageCount": "13",
+          "imageName": "nophoto.png",
+          "pattern": "^((9[4CEF][0-9A-F]{6})|((Y20N|Y50[23])-[0-9ABCDEFGHJKMNPQRSTVWXYZ]{4})|((4K0|4G[EF]|4H[FG])-[0-9ABCDEFGHJKMNPQRSTVWXYZ]{5}))$",
+          "typeName": "VUSION 2.6 BWRY",
+          "scenarios": [
+            {
+              "scenarioName": "DELETED",
+              "scenarioId": "DELETED_56143",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "UNKNOWN",
+              "scenarioId": "UNKNOWN_56143",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "geoloc",
+              "scenarioId": "GEOLOC",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "BATTERY",
+              "scenarioId": "BATTERY_56143",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "APENAS",
+              "scenarioId": "APENAS",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "STANDARD",
+              "scenarioId": "STANDARD_PRICE",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "DISSOCIATED",
+              "scenarioId": "DISSOCIATED_56143",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "PROMO",
+              "scenarioId": "DDD",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "UNAVAILABLE",
+              "scenarioId": "UNAVAILABLE",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "PVPMinimo",
+              "scenarioId": "PVPMINIMO",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "LXPY",
+              "scenarioId": "LXPY",
+              "itemCount": "1"
+            }
+          ],
+          "defaultOrientation": "LANDSCAPE",
+          "displayType": "PORTRAIT_LANDSCAPE",
+          "screenTechnology": "E_PAPER",
+          "transmissionTechnology": "HIGH_FREQUENCY",
+          "screenColor": "BLACK_WHITE_RED_YELLOW",
+          "width": "296",
+          "animated": "false",
+          "typeId": "HF_VUSION_2_6_BWRY",
+          "dpi": "125",
+          "height": "152",
+          "unitaryUpdateDuration": "12000"
+        },
+        {
+          "naturalOrder": "3.0",
+          "pageCount": "13",
+          "imageName": "2.6_BWY.jpg",
+          "pattern": "B[8C][0-9a-fA-F]{6}",
+          "typeName": "2.6 BWY",
+          "scenarios": [
+            {
+              "scenarioName": "DELETED",
+              "scenarioId": "DELETED_56143",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "UNKNOWN",
+              "scenarioId": "UNKNOWN_56143",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "geoloc",
+              "scenarioId": "GEOLOC",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "BATTERY",
+              "scenarioId": "BATTERY_56143",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "APENAS",
+              "scenarioId": "APENAS",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "STANDARD",
+              "scenarioId": "STANDARD_PRICE",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "DISSOCIATED",
+              "scenarioId": "DISSOCIATED_56143",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "PROMO",
+              "scenarioId": "DDD",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "UNAVAILABLE",
+              "scenarioId": "UNAVAILABLE",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "PVPMinimo",
+              "scenarioId": "PVPMINIMO",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "LXPY",
+              "scenarioId": "LXPY",
+              "itemCount": "1"
+            }
+          ],
+          "defaultOrientation": "LANDSCAPE",
+          "displayType": "PORTRAIT_LANDSCAPE",
+          "screenTechnology": "E_PAPER",
+          "transmissionTechnology": "HIGH_FREQUENCY",
+          "screenColor": "BLACK_WHITE_YELLOW",
+          "width": "296",
+          "animated": "false",
+          "typeId": "HF_G1_2.6_BWY",
+          "dpi": "126",
+          "height": "152",
+          "unitaryUpdateDuration": "4499"
+        },
+        {
+          "naturalOrder": "3.0",
+          "pageCount": "13",
+          "imageName": "nophoto.png",
+          "pattern": "^((F[B9]|B[A])[0-9a-fA-F]{6}|((Y51[12])-[0-9ABCDEFGHJKMNPQRSTVWXYZ]{4})|((4GG)-[0-9ABCDEFGHJKMNPQRSTVWXYZ]{5}))$",
+          "typeName": "2.6 FREEZER BW",
+          "scenarios": [
+            {
+              "scenarioName": "DELETED",
+              "scenarioId": "DELETED_56143",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "UNKNOWN",
+              "scenarioId": "UNKNOWN_56143",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "geoloc",
+              "scenarioId": "GEOLOC",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "BATTERY",
+              "scenarioId": "BATTERY_56143",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "APENAS",
+              "scenarioId": "APENAS",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "STANDARD",
+              "scenarioId": "STANDARD_PRICE",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "DISSOCIATED",
+              "scenarioId": "DISSOCIATED_56143",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "PROMO",
+              "scenarioId": "DDD",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "UNAVAILABLE",
+              "scenarioId": "UNAVAILABLE",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "PVPMinimo",
+              "scenarioId": "PVPMINIMO",
+              "itemCount": "1"
+            },
+            {
+              "scenarioName": "LXPY",
+              "scenarioId": "LXPY",
+              "itemCount": "1"
+            }
+          ],
+          "defaultOrientation": "LANDSCAPE",
+          "displayType": "PORTRAIT_LANDSCAPE",
+          "screenTechnology": "E_PAPER",
+          "transmissionTechnology": "HIGH_FREQUENCY",
+          "screenColor": "BLACK_WHITE",
+          "width": "296",
+          "animated": "false",
+          "typeId": "HF_FREEZER_2.6_BW",
+          "dpi": "126",
+          "height": "152",
+          "unitaryUpdateDuration": "4499"
+        }
+      ],
+      "lastUpdate": "2025-08-06T21:00:47.502Z",
+      "name": "Sonae MC Food - 20250701",
+      "additionnalInformation": "Etiquetas Eletronicas Lojas MCH Food 2024\r\nVersion added 2.6BWRY",
+      "id": "bomdia_pt/SONAE_MC_FOOD_-_20250701_CONTINENTE_MCH-MH-BJ_S1_25.1.2.smf",
+      "brand": "continente",
+      "exportInformation": {
+        "date": "2025-07-29T09:05:45.723Z",
+        "softwareName": "ses-imagotag-sms-studio1-prod.internal.cloudapp.net",
+        "user": "Sonae SONAE",
+        "softwareVersion": "1.8.33"
+      }
+    }
+  },
+  "activeItems": "false",
+  "type": "STORE",
+  "retailChainId": "bomdia_pt",
+  "setting": {
+    "name": "SONAE_MC_FOOD_-_20250701_CONTINENTE_MCH-MH-BJ_S1_25.1.2.smf",
+    "contentMD5": "WpMjBRe/MlsD50DtpkYncw==",
+    "id": "bomdia_pt/SONAE_MC_FOOD_-_20250701_CONTINENTE_MCH-MH-BJ_S1_25.1.2.smf",
+    "lastModified": "Tue, 29 Jul 2025 09:34:47 GMT"
+  },
+  "contact": {
+    "_function": "",
+    "role": "",
+    "phone": "",
+    "name": "",
+    "fax": "",
+    "email": ""
+  },
+  "storeName": "009648 - Leiria São Romão",
+  "id": "",
+  "storeDomain": "",
+  "refreshDataFrequency": 10,
+  "storeId": "bomdia_pt.009648",
+  "creationDate": "2024-10-04T08:31:38.879Z",
+  "modules": {
+    "vlink": {
+      "plan": "PREMIUM",
+      "status": "ACTIVE"
+    },
+    "adshelf": {
+      "plan": "STANDARD",
+      "status": "INACTIVE"
+    },
+    "assetManagement": {
+      "plan": "ENTREPRISE",
+      "status": "ACTIVE"
+    },
+    "geolocation": {
+      "jeegyUrl": "http://localhost:8888",
+      "plan": "STANDARD",
+      "status": "INACTIVE"
+    }
+  },
+  "typology": "CLOUD_SWARM",
+  "modificationDate": "2025-12-02T20:00:53.477Z",
+  "installType": "CLOUD_SWARM",
+  "location": {
+    "zipCode": "",
+    "country": "",
+    "streetNumber": "",
+    "city": "",
+    "street": "",
+    "state": "",
+    "gps": {
+      "lon": 0,
+      "lat": 0
+    }
+  },
+  "geolocated": false,
+  "account": {
+    "number": "PT0407463"
+  },
+  "status": {
+    "operational": "ONLINE",
+    "installation": "ACTIVE",
+    "messages": {
+      "matchingDaily": null,
+      "drivres": null,
+      "integrationDaily": null,
+      "matching": null,
+      "transmitters": null,
+      "integration": null,
+      "labels": null
+    }
+  },
+  "informations": "",
+  "applications": [],
+  "transmissionMode": "HIGH_FREQUENCY",
+  "isLowFrequencyActive": false,
+  "transmissionSystems": {
+    "highFrequency": {
+      "modificationDate": "2025-12-02T19:33:21.638301Z",
+      "transmittersEndPoint": "apa-eu-2.vusion.io:64135",
+      "transmitters": [
+        {
+          "serialNumber": "07A2AGC2207-O110632998",
+          "transmitterVersion": "3.1.4",
+          "channel": "3",
+          "creationDate": "2025-01-23T03:00:27.347Z",
+          "provisionning": {
+            "dns": "8.8.8.8;194.79.69.222",
+            "channel": 3,
+            "eth0Address": "10.155.123.200",
+            "cloudPoint": true,
+            "ble": false,
+            "jwtSecurityEnabled": true,
+            "gateway": "10.155.123.193",
+            "eth0Dhcp": false,
+            "eth0Netmask": "255.255.255.192"
+          },
+          "version": "2.6.1",
+          "url": "10.155.123.200",
+          "modificationDate": "2025-12-01T04:26:09.113Z",
+          "macAddress": "BC-A1-3A-45-3A-D7",
+          "transmissionTechnology": "HIGH_FREQUENCY",
+          "managedChannel": "10",
+          "connectivity": {
+            "lastOfflineDate": "2025-11-27T22:04:28.974Z",
+            "status": "ONLINE",
+            "lastOnlineDate": "2025-12-01T04:26:09.113Z"
+          },
+          "channelMode": "AP_MANUAL",
+          "name": "10.4.37.8",
+          "internalVersion": "2.3.2",
+          "id": "344103",
+          "transmitterFamilly": "SESimagotag_VGate_E1-G1",
+          "status": "OK"
+        },
+        {
+          "serialNumber": "07A2AGC2207-O110709443",
+          "transmitterVersion": "3.1.4",
+          "channel": "10",
+          "creationDate": "2025-01-23T03:00:46.025Z",
+          "provisionning": {
+            "dns": "8.8.8.8;194.79.69.222",
+            "channel": 10,
+            "eth0Address": "10.155.123.202",
+            "cloudPoint": true,
+            "ble": false,
+            "jwtSecurityEnabled": true,
+            "gateway": "10.155.123.193",
+            "eth0Dhcp": false,
+            "eth0Netmask": "255.255.255.192"
+          },
+          "version": "2.6.1",
+          "url": "10.155.123.202",
+          "modificationDate": "2025-11-28T06:46:39.694Z",
+          "macAddress": "BC-A1-3A-45-3A-E2",
+          "transmissionTechnology": "HIGH_FREQUENCY",
+          "managedChannel": "9",
+          "connectivity": {
+            "lastOfflineDate": "2025-11-27T22:03:03.772Z",
+            "status": "ONLINE",
+            "lastOnlineDate": "2025-11-28T06:46:39.694Z"
+          },
+          "channelMode": "AP_MANUAL",
+          "name": "10.4.81.5",
+          "internalVersion": "2.3.2",
+          "id": "344114",
+          "transmitterFamilly": "SESimagotag_VGate_E1-G1",
+          "status": "OK"
+        },
+        {
+          "serialNumber": "07A2AGC2207-O110709430",
+          "transmitterVersion": "3.1.4",
+          "channel": "9",
+          "creationDate": "2025-01-23T03:00:46.084Z",
+          "provisionning": {
+            "dns": "8.8.8.8;194.79.69.222",
+            "channel": 9,
+            "eth0Address": "10.155.123.201",
+            "cloudPoint": true,
+            "ble": false,
+            "jwtSecurityEnabled": true,
+            "gateway": "10.155.123.193",
+            "eth0Dhcp": false,
+            "eth0Netmask": "255.255.255.192"
+          },
+          "version": "2.6.1",
+          "url": "10.155.123.201",
+          "modificationDate": "2025-11-29T05:30:43.259Z",
+          "macAddress": "BC-A1-3A-45-3A-E0",
+          "transmissionTechnology": "HIGH_FREQUENCY",
+          "managedChannel": "8",
+          "connectivity": {
+            "lastOfflineDate": "2025-11-27T22:02:58.441Z",
+            "status": "ONLINE",
+            "lastOnlineDate": "2025-11-29T05:30:43.259Z"
+          },
+          "channelMode": "AP_MANUAL",
+          "name": "10.4.38.7",
+          "internalVersion": "2.3.2",
+          "id": "344112",
+          "transmitterFamilly": "SESimagotag_VGate_E1-G1",
+          "status": "OK"
+        }
+      ],
+      "transmittersAuthEndPoint": "ap-auth.vusion.io:7354",
+      "partition": "bomdia_pt.009648",
+      "storeId": "bomdia_pt.009648",
+      "key": "highFrequency",
+      "lastTransmittersModificationDate": "2025-12-02T19:33:21.638301Z",
+      "type": "HIGH_FREQUENCY",
+      "offlineLabels": 996,
+      "connectivity": {
+        "lastOnlineDate": "2025-12-02T19:33:21.637661Z",
+        "status": "ONLINE"
+      },
+      "onlineLabels": 10201,
+      "status": "OK",
+      "flash": {
+        "lastFlashDate": "2025-11-07T11:38:17.265Z"
+      }
+    }
+  },
+  "lastRefreshData": "2025-12-02T19:36:55.296Z",
+  "deployment": {
+    "effective": {
+      "accesspoints": 3,
+      "printers": 0,
+      "endDate": "2024-10-04T08:31:38.879Z",
+      "rails": 0,
+      "startDate": "2024-10-04T08:31:38.879Z",
+      "labels": 10843
+    },
+    "firstIntegrationDate": "2025-12-01T05:59:07.818Z",
+    "modificationDate": "2025-12-01T23:01:28.437Z",
+    "expected": {
+      "accesspoints": 0,
+      "printers": 0,
+      "endDate": null,
+      "rails": 0,
+      "startDate": null,
+      "labels": 0
+    },
+    "firstSettingDate": "2025-08-06T21:00:47.502Z",
+    "installationRate": 1,
+    "printerInstallation": "NOT_APPLICABLE",
+    "status": "FINISHED"
+  },
+  "_score": 1
+}

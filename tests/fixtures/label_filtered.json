@@ -1,0 +1,212 @@
+{
+	"query": {
+		"search": "labelId:9C1110EB AND storeId:bomdia_pt.009648",
+		"includes": [
+			"*"
+		],
+		"excludes": [
+			"whatever"
+		],
+		"sort": [
+			{
+				"modificationDate": {
+					"order": "desc"
+				}
+			}
+		],
+		"pageSize": 1,
+		"page": 1
+	},
+	"count": 1,
+	"values": [
+		{
+			"modificationDate": "2025-12-05T11:54:24.818Z",
+			"labelId": "9C1110EB",
+			"connectivity": {
+				"status": "ONLINE",
+				"rssi": -61,
+				"modificationDate": "2025-02-25T13:15:24.006Z",
+				"lqi": 0,
+				"signalQuality": "GOOD",
+				"lastOnlineDate": "2025-02-25T13:15:30.360Z",
+				"previousStatus": "ONLINE",
+				"lastOfflineDate": "2025-02-15T01:16:33.856Z"
+			},
+			"page": 0,
+			"storeId": "bomdia_pt.009648",
+			"creationDate": "2024-10-30T15:54:35.703Z",
+			"currentPage": "PAGE_0",
+			"status": "SYNCHRONIZED",
+			"hardware": {
+				"naturalOrder": "68.0",
+				"pageCount": 13,
+				"imageName": "nophoto.png",
+				"typeName": "VUSION 2.6 BWRY",
+				"pattern": "^((9[4CEF][0-9A-F]{6})|((Y20N|Y50[23])-[0-9ABCDEFGHJKMNPQRSTVWXYZ]{4})|((4K0|4G[EF]|4H[FG])-[0-9ABCDEFGHJKMNPQRSTVWXYZ]{5}))$",
+				"defaultOrientation": "LANDSCAPE",
+				"standAlone": "^((Y50[23]|4G[EF]))-.+$",
+				"displayType": "PORTRAIT_LANDSCAPE",
+				"screenTechnology": "E_PAPER",
+				"transmissionTechnology": "HIGH_FREQUENCY",
+				"screenColor": "BLACK_WHITE_RED_YELLOW",
+				"width": "296",
+				"animated": "false",
+				"typeId": "HF_VUSION_2_6_BWRY",
+				"dpi": "125",
+				"height": "152",
+				"unitaryUpdateDuration": "12000",
+				"extendedFirmware": "3.4.0",
+				"microcontrollerType": "MCU_EFR32FG22C121F256",
+				"productVariant": "ESL_EFR32FG22C121_SMALLSIZE_E5_SE",
+				"firmware": "3.2.0",
+				"battery": "GOOD",
+				"deviceType": "STANDALONE",
+				"labelSubSerial": null,
+				"labelSerial": null
+			},
+			"retailChainId": "bomdia_pt",
+			"package": {
+				"registrationDate": "2024-10-30T15:54:35.703Z",
+				"packageId": "B2412220491",
+				"claimProvided": false
+			},
+			"temperatureDate": "2025-12-05T06:02:25.116Z",
+			"modificationType": "TRANSMITTER_CHANGE",
+			"lastJoinTimestamp": "2025-12-05T11:54:24.818Z",
+			"transmitterId": "344114",
+			"transmission": {
+				"registrationDate": "2025-01-23T02:59:57.645Z",
+				"lastSuccessfulTransmissionDate": "2025-09-23T02:16:14.003Z",
+				"transmissionDate": "2025-09-23T02:16:14.003Z"
+			},
+			"encryption": {
+				"type": "AES128",
+				"status": "ACTIVE"
+			},
+			"temperature": 21.39998,
+			"billing": {
+				"inactivateDate": "2024-10-31T05:11:33.091Z",
+				"status": "ACTIVE",
+				"activateDate": "2024-10-31T13:04:04.346Z"
+			},
+			"deletionDate": null,
+			"correlationId": null,
+			"matching": {
+				"matchingDate": "2024-11-18T08:02:43.820Z",
+				"scenario": {
+					"name": "STANDARD",
+					"automaticScenarioId": "PVPMINIMO",
+					"automaticScenarioName": "PVPMinimo",
+					"scenarioId": "STANDARD_PRICE"
+				},
+				"items": [
+					{
+						"references": [
+							"5601164906129",
+							"5601164906129000000059"
+						],
+						"custom": {
+							"eanpvpwas": "5601164906129000000099",
+							"PVR_WAS_Description": "PVP RECOMENDADO",
+							"DISCOUNT_DESC": "MENOS",
+							"qty_on_order_night": "0",
+							"customsku": "7754899",
+							"demo_stock_night": "0",
+							"desconto": "40%",
+							"DESC_WAS": "PVP RECOMENDADO",
+							"versiesp": "true",
+							"pres_stock_night": "48",
+							"PVR_IS_Description": "SOBRE PVP RECOMENDADO",
+							"TICKET_SUBTYPE": "PVPR",
+							"stock_in_transit_night": "0",
+							"PVR": "Y",
+							"DESC_IS": "SOBRE PVP RECOMENDADO",
+							"fechainicio": "DE 17 NOVEMBRO",
+							"rupt_alert_night_esl": "0.0",
+							"srp_init_night": "0",
+							"tag_date_night": "",
+							"rupt_alert_night": "0",
+							"class": "1",
+							"qty_sold": "0",
+							"especialean": "5601164906129",
+							"soh_night": "23",
+							"PROMO_DESC": "",
+							"send_date_night": "",
+							"preciouniwas": "3",
+							"PVP_VAT_RATE": "",
+							"dept": "303",
+							"fechafinal": "A 24 DEZEMBRO",
+							"validade_promocao": "17/11/2025 a 24/12/2025",
+							"PVP_UOM_DESC": "Preço p/LT:",
+							"preciounis": "1.79",
+							"promo_simplified_layout": "1",
+							"precioantes": "0.99",
+							"SHOW_VAT_RATE_STAMP": "N",
+							"unidades": "LT",
+							"subclass": "1",
+							"especialid": "5601164906129000000059",
+							"VAT_RATE_DESC": "",
+							"status_night": "C",
+							"status": "C",
+							"sendDate": "",
+							"primUpc": ""
+						},
+						"description": "SUPER BOCK",
+						"matchedItemId": "5601164906129",
+						"storeId": "bomdia_pt.009648",
+						"extended": null,
+						"itemId": "7754899",
+						"modificationDate": "2025-12-04T23:59:14.974Z",
+						"price": 0.59,
+						"name": "SKY 33CL",
+						"id": "7754899",
+						"brand": "CERV C/ALC LATA",
+						"status": "ACTIVE"
+					}
+				],
+				"extended": {
+					"battery": "GOOD"
+				}
+			},
+			"page_0": {
+				"current": {
+					"errorKey": 200,
+					"metadata": {
+						"originalCorrelationId": "3d5afcc4-6337-43be-8d58-0c8c9b2e4680",
+						"retryable": null,
+						"lastRetryDate": null,
+						"originalExternalId": "3d5afcc4-6337-43be-8d58-0c8c9b2e4680",
+						"replacedBy": null,
+						"transmissionEndDate": "2025-02-24T05:36:11.564Z",
+						"extClientId": null,
+						"extCorrelationId": null,
+						"originalEnqueueDate": "2025-02-24T05:33:52.673Z",
+						"retryLeft": 5,
+						"vtransmitEnqueueDate": "2025-02-24T05:36:00.188Z",
+						"transmissionEnqueueDate": "2025-02-24T05:36:00.224Z",
+						"externalIdHf": "174037523267367",
+						"originalEventType": "ITEM_INPUT",
+						"retry": null
+					},
+					"timelineId": "IMAGE_TRANSMISSION.3d5afcc4-6337-43be-8d58-0c8c9b2e4680.9C1110EB.PAGE_0",
+					"errorMessage": "Task was executed successfully",
+					"externalId": "3d5afcc4-6337-43be-8d58-0c8c9b2e4680",
+					"eventType": "ITEM_INPUT",
+					"creationDate": "2025-02-24T05:33:52.673Z",
+					"message": "Task was executed successfully",
+					"duration": 138891,
+					"timelineType": "IMAGE_TRANSMISSION",
+					"modificationDate": "2025-02-24T05:36:11.564Z",
+					"transmissionStatus": "FINAL",
+					"correlationId": "3d5afcc4-6337-43be-8d58-0c8c9b2e4680",
+					"retryStrategy": "ALWAYS",
+					"status": "SUCCESS"
+				},
+				"expected": null
+			},
+			"previousTransmitterId": "344112",
+			"location": null,
+			"inStoreDeviceType": "LABEL"
+		}
+	]
+}

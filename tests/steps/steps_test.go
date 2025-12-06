@@ -38,12 +38,10 @@ var opt = godog.Options{
 	Output: colors.Colored(os.Stdout), // colorido no terminal
 	Format: "pretty",                  // mostra os steps
 	Paths:  resolveFeaturePaths(),     // pasta(s) de features resolvida(s)
-	Tags:   "",                        // opcional: ex. "@wip && ~@ignore"
+	Tags:   "",                        // opcional: ex. "@wip && ~@ignore"62.5
 }
 
 func init() {
-	// Permite sobrescrever por flags do `go test`, ex.:
-	// go test ./... -godog.format=progress -godog.tags=@wip -godog.paths=../features
 	godog.BindFlags("godog.", flag.CommandLine, &opt)
 }
 
@@ -51,7 +49,7 @@ func TestMain(m *testing.M) {
 	flag.Parse()
 
 	status := godog.TestSuite{
-		Name:                 "orders-tests",
+		Name:                 "orchestrator",
 		ScenarioInitializer:  InitializeScenario,
 		TestSuiteInitializer: InitializeTestSuite,
 		Options:              &opt,

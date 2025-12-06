@@ -14,5 +14,5 @@ dist/
 # Projeto
 api/app.db
 api/*.db
-
+.env
 volumes

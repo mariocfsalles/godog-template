@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"reflect"
 	"regexp"
+	"strings"
 	"time"
 )
 
@@ -24,12 +25,6 @@ func AnyToStringID(v any) (string, bool) {
 	default:
 		return "", false
 	}
-}
-
-// Compara v (string|float) com alvo textual.
-func MatchID(v any, want string) bool {
-	got, ok := AnyToStringID(v)
-	return ok && got == want
 }
 
 func PrettyJSON(b []byte) string {
@@ -53,16 +48,6 @@ func MatchWithPlaceholders(expected, actual any, path string) error {
 	// placeholders baseados em string
 	if s, ok := expected.(string); ok {
 		switch s {
-		case PlaceholderAnyULID:
-			as, ok := actual.(string)
-			if !ok {
-				return fmt.Errorf("mismatch at %s: expected ULID string, got %T (%v)", path, actual, actual)
-			}
-			if !ulidRe.MatchString(as) {
-				return fmt.Errorf("mismatch at %s: value %q is not a valid ULID", path, as)
-			}
-			return nil
-
 		case PlaceholderAnyTimestamp:
 			as, ok := actual.(string)
 			if !ok {
@@ -147,4 +132,8 @@ func MatchWithPlaceholders(expected, actual any, path string) error {
 		return fmt.Errorf("mismatch at %s: expected %v, got %v", path, expected, actual)
 	}
 	return nil
+}
+
+func TrimBaseURL(s string) string {
+	return strings.TrimRight(s, "/")
 }

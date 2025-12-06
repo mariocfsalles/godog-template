@@ -1,0 +1,83 @@
+{
+	"query": {
+		"search": "000206 - Montijo",
+		"includes": [
+			"storeId",
+			"storeName",
+			"retailChainName",
+			"retailChainId",
+			"location"
+		],
+		"sort": [
+			{
+				"storeName.keyword": {
+					"order": "asc"
+				}
+			},
+			{
+				"creationDate": {
+					"order": "asc"
+				}
+			}
+		],
+		"pageSize": 50,
+		"page": 1
+	},
+	"count": 3,
+	"values": [
+		{
+			"retailChainName": "MDL",
+			"storeId": "modelo_pt.000206",
+			"retailChainId": "modelo_pt",
+			"storeName": "000206 - Montijo",
+			"location": {
+				"zipCode": "",
+				"country": "",
+				"streetNumber": "",
+				"city": "",
+				"street": "",
+				"state": "",
+				"gps": {
+					"lon": 0,
+					"lat": 0
+				}
+			}
+		},
+		{
+			"retailChainName": "CNT",
+			"retailChainId": "continente_pt",
+			"storeName": "000462 - Montijo",
+			"storeId": "continente_pt.000462",
+			"location": {
+				"zipCode": "",
+				"country": "",
+				"streetNumber": "",
+				"city": "",
+				"street": "",
+				"state": "",
+				"gps": {
+					"lon": 0,
+					"lat": 0
+				}
+			}
+		},
+		{
+			"storeId": "wells_pt.001143",
+			"retailChainName": "WEL",
+			"retailChainId": "wells_pt",
+			"storeName": "001143 - Fórum Montijo",
+			"location": {
+				"zipCode": "",
+				"country": "",
+				"streetNumber": "",
+				"city": "",
+				"street": "",
+				"state": "",
+				"gps": {
+					"lon": 0,
+					"lat": 0
+				}
+			}
+		}
+	]
+}

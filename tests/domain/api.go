@@ -6,7 +6,9 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"orders-tests/helpers"
+	"net/url"
+	"orchestrator/helpers"
+	"os"
 	"strings"
 	"time"
 )
@@ -21,11 +23,13 @@ type ApiCtx struct {
 	Debug    bool
 	LastBody []byte
 	Vars     map[string]string
+	Query    url.Values
 }
 
 func (a *ApiCtx) ResolvePath(p string) string {
 	for k, v := range a.Vars {
 		p = strings.ReplaceAll(p, "{"+k+"}", v)
+		p = strings.ReplaceAll(p, ":"+k, v)
 	}
 	if !strings.HasPrefix(p, "/") {
 		p = "/" + p
@@ -69,10 +73,13 @@ func (a *ApiCtx) LogResp(resp *http.Response, body []byte) {
 
 func (a *ApiCtx) Post(path string, reqBody any, respDest any) error {
 	client := &http.Client{Timeout: 15 * time.Second}
-	path = a.ResolvePath(path)
-	url := a.BaseURL + path
 
-	// 1) prepara o corpo
+	url, err := a.buildURL(path)
+	if err != nil {
+		return err
+	}
+	defer func() { a.Query = nil }()
+
 	var bodyBytes []byte
 	switch v := reqBody.(type) {
 	case nil:
@@ -82,14 +89,12 @@ func (a *ApiCtx) Post(path string, reqBody any, respDest any) error {
 	case string:
 		bodyBytes = []byte(v)
 	default:
-		// qualquer struct/map vira JSON
 		b, err := json.Marshal(v)
 		if err != nil {
 			return fmt.Errorf("marshal request: %w", err)
 		}
 		bodyBytes = b
 
-		// se ninguém setou Content-Type, assume JSON
 		if a.ReqHdr.Get("Content-Type") == "" {
 			a.ReqHdr.Set("Content-Type", "application/json")
 		}
@@ -100,7 +105,6 @@ func (a *ApiCtx) Post(path string, reqBody any, respDest any) error {
 		return err
 	}
 
-	// 2) aplica headers configurados via step
 	for k, vals := range a.ReqHdr {
 		for _, v := range vals {
 			req.Header.Add(k, v)
@@ -109,7 +113,6 @@ func (a *ApiCtx) Post(path string, reqBody any, respDest any) error {
 
 	a.LogReq(http.MethodPost, url, bodyBytes, req.Header)
 
-	// 3) faz a chamada
 	resp, err := client.Do(req)
 	if err != nil {
 		return err
@@ -127,74 +130,6 @@ func (a *ApiCtx) Post(path string, reqBody any, respDest any) error {
 
 	a.LogResp(resp, b)
 
-	// 4) desserializa na struct de resposta, se pedirem
-	if respDest != nil && len(a.LastBody) > 0 {
-		if err := json.Unmarshal(a.LastBody, respDest); err != nil {
-			return fmt.Errorf("unmarshal response: %w", err)
-		}
-	}
-
-	return nil
-}
-
-func (a *ApiCtx) Put(path string, reqBody any, respDest any) error {
-	client := &http.Client{Timeout: 15 * time.Second}
-	path = a.ResolvePath(path)
-	url := a.BaseURL + path
-
-	// 1) prepara o corpo
-	var bodyBytes []byte
-	switch v := reqBody.(type) {
-	case nil:
-		bodyBytes = nil
-	case []byte:
-		bodyBytes = v
-	case string:
-		bodyBytes = []byte(v)
-	default:
-		b, err := json.Marshal(v)
-		if err != nil {
-			return fmt.Errorf("marshal request: %w", err)
-		}
-		bodyBytes = b
-		if a.ReqHdr.Get("Content-Type") == "" {
-			a.ReqHdr.Set("Content-Type", "application/json")
-		}
-	}
-
-	req, err := http.NewRequest(http.MethodPut, url, bytes.NewReader(bodyBytes))
-	if err != nil {
-		return err
-	}
-
-	// 2) aplica headers configurados via step
-	for k, vals := range a.ReqHdr {
-		for _, v := range vals {
-			req.Header.Add(k, v)
-		}
-	}
-
-	a.LogReq(http.MethodPut, url, bodyBytes, req.Header)
-
-	// 3) faz a chamada
-	resp, err := client.Do(req)
-	if err != nil {
-		return err
-	}
-	defer resp.Body.Close()
-
-	a.LastResp = resp
-	a.LastHdr = resp.Header.Clone()
-
-	b, err := io.ReadAll(resp.Body)
-	if err != nil {
-		return err
-	}
-	a.LastBody = b
-
-	a.LogResp(resp, b)
-
-	// 4) desserializa na struct de resposta, se pedirem
 	if respDest != nil && len(a.LastBody) > 0 {
 		if err := json.Unmarshal(a.LastBody, respDest); err != nil {
 			return fmt.Errorf("unmarshal response: %w", err)
@@ -206,8 +141,12 @@ func (a *ApiCtx) Put(path string, reqBody any, respDest any) error {
 
 func (a *ApiCtx) Get(path string, respDest any) error {
 	client := &http.Client{Timeout: 15 * time.Second}
-	path = a.ResolvePath(path)
-	url := a.BaseURL + path
+
+	url, err := a.buildURL(path)
+	if err != nil {
+		return err
+	}
+	defer func() { a.Query = nil }()
 
 	req, err := http.NewRequest(http.MethodGet, url, nil)
 	if err != nil {
@@ -218,6 +157,10 @@ func (a *ApiCtx) Get(path string, respDest any) error {
 		for _, v := range vals {
 			req.Header.Add(k, v)
 		}
+	}
+
+	if respDest != nil && req.Header.Get("Accept") == "" {
+		req.Header.Set("Accept", "application/json")
 	}
 
 	a.LogReq(http.MethodGet, url, nil, req.Header)
@@ -246,4 +189,63 @@ func (a *ApiCtx) Get(path string, respDest any) error {
 	}
 
 	return nil
+}
+
+func (a *ApiCtx) EffectiveBaseURL() string {
+	// 1) Escape hatch explícito via vars
+	if raw, ok := a.Vars["base_url"]; ok && strings.TrimSpace(raw) != "" {
+		return helpers.TrimBaseURL(raw)
+	}
+
+	// 2) Header de subscrição decide qual base usar
+	subKey := strings.TrimSpace(a.ReqHdr.Get("Ocp-Apim-Subscription-Key"))
+	if subKey != "" {
+		// VUSION
+		if vusionKey := os.Getenv("VUSION_PRO_SUBSCRIPTION_KEY"); vusionKey != "" && subKey == vusionKey {
+			if base := os.Getenv("API_BASE_VUSION"); base != "" {
+				return helpers.TrimBaseURL(base)
+			}
+		}
+
+		// VLINK
+		if vlinkKey := os.Getenv("VLINK_PRO_SUBSCRIPTION_KEY"); vlinkKey != "" && subKey == vlinkKey {
+			if base := os.Getenv("API_BASE_VLINK"); base != "" {
+				return helpers.TrimBaseURL(base)
+			}
+		}
+	}
+
+	// 3) Fallback: a BaseURL padrão
+	return a.BaseURL
+}
+
+func (a *ApiCtx) buildURL(path string) (string, error) {
+	var fullURL string
+
+	// Se já vier absoluta, não mexe na base
+	if strings.HasPrefix(path, "http://") || strings.HasPrefix(path, "https://") {
+		fullURL = path
+	} else {
+		path = a.ResolvePath(path)
+		fullURL = a.EffectiveBaseURL() + path
+	}
+
+	// Anexa query params, se houver
+	if a.Query != nil && len(a.Query) > 0 {
+		u, err := url.Parse(fullURL)
+		if err != nil {
+			return "", fmt.Errorf("parse URL: %w", err)
+		}
+
+		q := u.Query()
+		for k, vals := range a.Query {
+			for _, v := range vals {
+				q.Add(k, v)
+			}
+		}
+		u.RawQuery = q.Encode()
+		fullURL = u.String()
+	}
+
+	return fullURL, nil
 }

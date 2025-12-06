@@ -1,0 +1,94 @@
+{
+	"query": {
+		"search": "coca",
+		"sort": [
+			{
+				"itemId": {
+					"order": "asc"
+				}
+			},
+			{
+				"creationDate": {
+					"order": "asc"
+				}
+			}
+		],
+		"pageSize": 1,
+		"page": 1
+	},
+	"count": 35,
+	"values": [
+		{
+			"references": [
+				"5449000054227",
+				"5449000054227000000150"
+			],
+			"custom": {
+				"eanpvpwas": "5449000054227000000150",
+				"PVR_WAS_Description": "",
+				"DISCOUNT_DESC": "",
+				"customsku": "2391674",
+				"desconto": "%",
+				"DESC_WAS": "",
+				"versiesp": "false",
+				"PVR_IS_Description": "",
+				"TICKET_SUBTYPE": "PRICE",
+				"PVR": "N",
+				"DESC_IS": "",
+				"fechainicio": "DE  undefined",
+				"send_date": "",
+				"class": "1",
+				"especialean": "5449000054227",
+				"PROMO_DESC": "",
+				"preciouniwas": "1.5",
+				"PVP_VAT_RATE": "",
+				"dept": "302",
+				"prim_upc": "",
+				"fechafinal": "A  undefined",
+				"validade_promocao": "",
+				"PVP_UOM_DESC": "Preço p/LT:",
+				"preciounis": "",
+				"promo_simplified_layout": "1",
+				"precioantes": "1.5",
+				"SHOW_VAT_RATE_STAMP": "N",
+				"unidades": "LT",
+				"subclass": "1",
+				"especialid": "5449000054227000000150",
+				"VAT_RATE_DESC": "",
+				"status": "A",
+				"qty_on_order_night": "0",
+				"demo_stock_night": "0",
+				"pres_stock_night": "144",
+				"stock_in_transit_night": "36",
+				"rupt_alert_night_esl": "0.0",
+				"srp_init_night": "0",
+				"tag_date_night": "",
+				"rupt_alert_night": "0",
+				"qty_sold": "0",
+				"soh_night": "117",
+				"send_date_night": "",
+				"status_night": "A"
+			},
+			"description": "COCA COLA",
+			"storeId": "bomdia_pt.009648",
+			"creationDate": "2024-10-15T01:51:50.942Z",
+			"extended": null,
+			"matching": {
+				"count": 1,
+				"matched": true,
+				"labels": [
+					"9C116E47"
+				]
+			},
+			"retailChainId": "bomdia_pt",
+			"itemId": "2391674",
+			"modificationDate": "2025-12-04T05:49:43.405Z",
+			"deletionDate": null,
+			"price": 1.5,
+			"name": "1L",
+			"id": "2391674",
+			"brand": "REFRIGERANTE C/GÁS",
+			"status": "ACTIVE"
+		}
+	]
+}
